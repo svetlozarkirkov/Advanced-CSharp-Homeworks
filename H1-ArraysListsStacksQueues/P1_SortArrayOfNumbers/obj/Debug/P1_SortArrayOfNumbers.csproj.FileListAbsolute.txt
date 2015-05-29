@@ -1,6 +1,0 @@
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\bin\Debug\P1_SortArrayOfNumbers.exe.config
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\bin\Debug\P1_SortArrayOfNumbers.exe
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\bin\Debug\P1_SortArrayOfNumbers.pdb
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\obj\Debug\P1_SortArrayOfNumbers.csprojResolveAssemblyReference.cache
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\obj\Debug\P1_SortArrayOfNumbers.exe
-c:\users\sve\documents\visual studio 2013\Projects\AdvancedCSharpHomeworks\H1-ArraysListsStacksQueues\P1_SortArrayOfNumbers\obj\Debug\P1_SortArrayOfNumbers.pdb
