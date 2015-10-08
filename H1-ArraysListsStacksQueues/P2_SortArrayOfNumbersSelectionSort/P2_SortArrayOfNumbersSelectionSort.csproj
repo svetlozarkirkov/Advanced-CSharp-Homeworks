@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8DF2AFB6-6602-41CA-A139-1190BD83C3D9}</ProjectGuid>
+    <ProjectGuid>{645FC056-0B81-4E5C-9C9E-06D402B99CBF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>P1_SortArrayOfNumbers</RootNamespace>
-    <AssemblyName>P1_SortArrayOfNumbers</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>P2_SortArrayOfNumbersSelectionSort</RootNamespace>
+    <AssemblyName>P2_SortArrayOfNumbersSelectionSort</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

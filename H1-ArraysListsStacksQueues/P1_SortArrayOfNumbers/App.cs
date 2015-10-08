@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-
-namespace P1_SortArrayOfNumbers
+﻿namespace P1_SortArrayOfNumbers
 {
-    class P1_SortArrayOfNumbers
+    using System;
+    using System.Linq;
+
+    internal sealed class App
     {
-        static void Main()
+        internal static void Main()
         {
             int[] input = Console.ReadLine().Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
             Array.Sort(input);
