@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P4_SequencesOfEqualStrings"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5_LongestIncreasingSequence", "P5_LongestIncreasingSequence\P5_LongestIncreasingSequence.csproj", "{4643111D-842D-4D75-94D0-7FFCB01BFCDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P6_SubsetSums", "P6_SubsetSums\P6_SubsetSums.csproj", "{67992F48-5908-4662-BF3D-8EE57C952567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P7_SortedSubsetSums", "P7_SortedSubsetSums\P7_SortedSubsetSums.csproj", "{76A4693A-1A0B-4117-BEC0-E5AEBB5226A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4643111D-842D-4D75-94D0-7FFCB01BFCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4643111D-842D-4D75-94D0-7FFCB01BFCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4643111D-842D-4D75-94D0-7FFCB01BFCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67992F48-5908-4662-BF3D-8EE57C952567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67992F48-5908-4662-BF3D-8EE57C952567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67992F48-5908-4662-BF3D-8EE57C952567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67992F48-5908-4662-BF3D-8EE57C952567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A4693A-1A0B-4117-BEC0-E5AEBB5226A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A4693A-1A0B-4117-BEC0-E5AEBB5226A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A4693A-1A0B-4117-BEC0-E5AEBB5226A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A4693A-1A0B-4117-BEC0-E5AEBB5226A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
