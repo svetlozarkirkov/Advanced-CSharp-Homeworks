@@ -8,13 +8,9 @@
         internal static void Main()
         {
             Console.Write("Enter floating-point numbers (separated by space): ");
-            var inputLine = Console.ReadLine();
-            if (!string.IsNullOrEmpty(inputLine))
-            {           
-                double[] inputNumbers = inputLine.Split(' ').Select(double.Parse).ToArray();
-                PrintResult(inputNumbers.Where(x => x % 1 != 0).ToArray());
-                PrintResult(inputNumbers.Where(x => x % 1 == 0).ToArray());
-            }
+            double[] inputNumbers = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
+            PrintResult(inputNumbers.Where(x => x % 1 != 0).ToArray());
+            PrintResult(inputNumbers.Where(x => x % 1 == 0).ToArray());
         }
 
         internal static void PrintResult(double[] numbers)

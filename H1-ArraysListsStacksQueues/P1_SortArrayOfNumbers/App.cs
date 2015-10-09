@@ -8,18 +8,9 @@
         internal static void Main()
         {
             Console.Write("Enter ints (separated by space): ");
-            var inputLine = Console.ReadLine();
-            if (!string.IsNullOrEmpty(inputLine))
-            {
-                int[] input = inputLine
-                    .Split(' ')
-                    .Select(int.Parse)
-                    .ToArray();
-                
-                Array.Sort(input);
-                
-                Console.WriteLine("Sorted: [ {0} ]", string.Join(", ", input));
-            }
+            int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            Array.Sort(input);
+            Console.WriteLine("Sorted: [ {0} ]", string.Join(", ", input));
         }
     }
 }

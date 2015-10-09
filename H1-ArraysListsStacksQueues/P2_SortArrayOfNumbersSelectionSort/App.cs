@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace P2_SortArrayOfNumbersSelectionSort
+﻿namespace P2_SortArrayOfNumbersSelectionSort
 {
     using System;
     using System.Linq;
@@ -10,23 +8,11 @@ namespace P2_SortArrayOfNumbersSelectionSort
         internal static void Main()
         {
             Console.Write("Enter ints (separated by space): ");
-            var inputLine = Console.ReadLine();
-            if (!string.IsNullOrEmpty(inputLine))
-            {
-                int[] array = inputLine
-                    .Split(' ')
-                    .Select(int.Parse)
-                    .ToArray();
-
-                SelectionSort(array);
-
-                Console.WriteLine(
-                    "Using SelectionSort: [ {0} ]", 
-                    string.Join(", ", array));
-            }
+            int[] result = SelectionSort(Console.ReadLine().Split(' ').Select(int.Parse).ToArray());
+            Console.WriteLine("Using SelectionSort: [ {0} ]", string.Join(", ", result));
         }
 
-        internal static void SelectionSort(int[] array)
+        internal static int[] SelectionSort(int[] array)
         {
             int arrayLength = array.Length;
 
@@ -49,6 +35,8 @@ namespace P2_SortArrayOfNumbersSelectionSort
                     array[minElementIndex] = temp;
                 }
             }
+
+            return array;
         }
     }
 }
