@@ -1,4 +1,6 @@
-﻿namespace P2_SortArrayOfNumbersSelectionSort
+﻿using System.Collections;
+
+namespace P2_SortArrayOfNumbersSelectionSort
 {
     using System;
     using System.Linq;
@@ -8,15 +10,20 @@
         internal static void Main()
         {
             Console.Write("Enter ints separated by space: ");
-            int[] array = Console.ReadLine()
-                .Split(' ')
-                .Select(x => int.Parse(x))
-                .ToArray();
+            var inputLine = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputLine))
+            {
+                int[] array = inputLine
+                    .Split(' ')
+                    .Select(int.Parse)
+                    .ToArray();
 
-            SelectionSort(array);
+                SelectionSort(array);
 
-            Console.WriteLine("Sorted using SelectionSort method: [ {0} ]", 
-                string.Join(", ", array));
+                Console.WriteLine(
+                    "Using SelectionSort: [ {0} ]", 
+                    string.Join(", ", array));
+            }
         }
 
         internal static void SelectionSort(int[] array)
@@ -25,21 +32,21 @@
 
             for (int current = 0; current < arrayLength - 1; current++)
             {
-                int minIndex = current;
+                int minElementIndex = current;
 
                 for (int next = current + 1; next < arrayLength; next++)
                 {
-                    if (array[next] < array[minIndex])
+                    if (array[next] < array[minElementIndex])
                     {
-                        minIndex = next;
+                        minElementIndex = next;
                     }
                 }
 
-                if (minIndex != current)
+                if (minElementIndex != current)
                 {
                     int temp = array[current];
-                    array[current] = array[minIndex];
-                    array[minIndex] = temp;
+                    array[current] = array[minElementIndex];
+                    array[minElementIndex] = temp;
                 }
             }
         }
