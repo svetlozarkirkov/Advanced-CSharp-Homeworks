@@ -11,21 +11,9 @@
             var inputLine = Console.ReadLine();
             if (!string.IsNullOrEmpty(inputLine))
             {           
-                double[] inputNumbers = inputLine
-                    .Split(' ')
-                    .Select(double.Parse)
-                    .ToArray();
-                
-                double[] numbersWithFraction = inputNumbers
-                    .Where(x => x % 1 != 0)
-                    .ToArray();
-                
-                double[] numbersWithoutFraction = inputNumbers
-                    .Where(x => x % 1 == 0)
-                    .ToArray();
-                
-                PrintResult(numbersWithFraction);
-                PrintResult(numbersWithoutFraction);
+                double[] inputNumbers = inputLine.Split(' ').Select(double.Parse).ToArray();
+                PrintResult(inputNumbers.Where(x => x % 1 != 0).ToArray());
+                PrintResult(inputNumbers.Where(x => x % 1 == 0).ToArray());
             }
         }
 
