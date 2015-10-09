@@ -7,9 +7,19 @@
     {
         internal static void Main()
         {
-            int[] input = Console.ReadLine().Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
-            Array.Sort(input);
-            Console.WriteLine(string.Join(" ", input));
+            Console.Write("Enter ints (separated by space): ");
+            var inputLine = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputLine))
+            {
+                int[] input = inputLine
+                    .Split(' ')
+                    .Select(int.Parse)
+                    .ToArray();
+                
+                Array.Sort(input);
+                
+                Console.WriteLine("Sorted: [ {0} ]", string.Join(", ", input));
+            }
         }
     }
 }

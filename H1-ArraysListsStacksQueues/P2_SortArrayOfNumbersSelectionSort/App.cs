@@ -9,7 +9,7 @@ namespace P2_SortArrayOfNumbersSelectionSort
     {
         internal static void Main()
         {
-            Console.Write("Enter ints separated by space: ");
+            Console.Write("Enter ints (separated by space): ");
             var inputLine = Console.ReadLine();
             if (!string.IsNullOrEmpty(inputLine))
             {

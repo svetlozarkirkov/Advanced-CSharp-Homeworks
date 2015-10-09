@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_SortArrayOfNumbers", "P1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_SortArrayOfNumbersSelectionSort", "P2_SortArrayOfNumbersSelectionSort\P2_SortArrayOfNumbersSelectionSort.csproj", "{645FC056-0B81-4E5C-9C9E-06D402B99CBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_CategorizeNumbersFindMinMaxAvg", "P3_CategorizeNumbersFindMinMaxAvg\P3_CategorizeNumbersFindMinMaxAvg.csproj", "{A090C105-8E79-4C38-A8FE-65C4DB0469DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{645FC056-0B81-4E5C-9C9E-06D402B99CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{645FC056-0B81-4E5C-9C9E-06D402B99CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{645FC056-0B81-4E5C-9C9E-06D402B99CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A090C105-8E79-4C38-A8FE-65C4DB0469DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A090C105-8E79-4C38-A8FE-65C4DB0469DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A090C105-8E79-4C38-A8FE-65C4DB0469DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A090C105-8E79-4C38-A8FE-65C4DB0469DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
