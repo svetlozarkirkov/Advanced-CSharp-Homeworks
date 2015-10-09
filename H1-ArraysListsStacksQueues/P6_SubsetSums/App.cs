@@ -30,8 +30,8 @@
                 Console.WriteLine("No matching subsets.");
             }
         }
-
-        internal static List<int[]> GetSubsets(int[] array)
+        
+        private static List<int[]> GetSubsets(int[] array)
         {
             List<int[]> subsets = new List<int[]>();
             foreach (int element in array)
@@ -48,6 +48,6 @@
             }
 
             return subsets;
-        } 
+        }
     }
 }
