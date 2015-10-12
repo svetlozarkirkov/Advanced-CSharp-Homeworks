@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5_ReverseNumber", "P5_Reve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P6_NumberCalculations", "P6_NumberCalculations\P6_NumberCalculations.csproj", "{94B3D812-A41B-40C9-B428-95248A13D784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P7_GenericArraySort", "P7_GenericArraySort\P7_GenericArraySort.csproj", "{B9CF8532-7E87-42AC-849F-D5F4BB01F905}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{94B3D812-A41B-40C9-B428-95248A13D784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B3D812-A41B-40C9-B428-95248A13D784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B3D812-A41B-40C9-B428-95248A13D784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9CF8532-7E87-42AC-849F-D5F4BB01F905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9CF8532-7E87-42AC-849F-D5F4BB01F905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9CF8532-7E87-42AC-849F-D5F4BB01F905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9CF8532-7E87-42AC-849F-D5F4BB01F905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

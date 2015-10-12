@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace P4_FirstLargerThanNeighbours
+﻿namespace P4_FirstLargerThanNeighbours
 {
+    using System;
+
     internal sealed class App
     {
         internal static void Main()
