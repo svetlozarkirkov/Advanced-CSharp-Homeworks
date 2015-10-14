@@ -9,8 +9,10 @@
             Console.Write("Enter N: ");
             int n = int.Parse(Console.ReadLine());
             int[,] matrix = new int[n, n];
+            
             PatternA(matrix);
             PrintMatrix(matrix);
+
             PatternB(matrix);
             PrintMatrix(matrix);
         }
@@ -19,12 +21,12 @@
         {
             int size = matrix.GetLength(0);
 
-            for (int i = 0; i < size; i++)
+            for (int col = 0; col < size; col++)
             {
-                for (int j = 0; j < size; j++)
+                for (int row = 0; row < size; row++)
                 {
-                    Console.Write("[ {0} , {1} ]: ", j, i);
-                    matrix[j, i] = int.Parse(Console.ReadLine());
+                    Console.Write("[ {0} , {1} ]: ", row, col);
+                    matrix[row, col] = int.Parse(Console.ReadLine());
                 }
             }
         }
@@ -33,22 +35,22 @@
         {
             int size = matrix.GetLength(0);
 
-            for (int i = 0; i < size; i++)
+            for (int col = 0; col < size; col++)
             {
-                if (i % 2 == 0)
+                if (col % 2 == 0)
                 {
-                    for (int j = 0; j < size; j++)
+                    for (int row = 0; row < size; row++)
                     {
-                        Console.Write("[ {0} , {1} ]: ", j, i);
-                        matrix[j, i] = int.Parse(Console.ReadLine());
+                        Console.Write("[ {0} , {1} ]: ", row, col);
+                        matrix[row, col] = int.Parse(Console.ReadLine());
                     }
                 }
                 else
                 {
-                    for (int j = size - 1; j >= 0; j--)
+                    for (int row = size - 1; row >= 0; row--)
                     {
-                        Console.Write("[ {0} , {1} ]: ", j, i);
-                        matrix[j, i] = int.Parse(Console.ReadLine());
+                        Console.Write("[ {0} , {1} ]: ", row, col);
+                        matrix[row, col] = int.Parse(Console.ReadLine());
                     }
                 }
             }
@@ -59,11 +61,11 @@
             int size = matrix.GetLength(0);
             Console.WriteLine();
 
-            for (int i = 0; i < size; i++)
+            for (int row = 0; row < size; row++)
             {
-                for (int j = 0; j < size; j++)
+                for (int col = 0; col < size; col++)
                 {
-                    Console.Write("{0}", matrix[i, j].ToString().PadLeft(6));
+                    Console.Write("{0}", matrix[row, col].ToString().PadLeft(6));
                 }
 
                 Console.WriteLine("\n");

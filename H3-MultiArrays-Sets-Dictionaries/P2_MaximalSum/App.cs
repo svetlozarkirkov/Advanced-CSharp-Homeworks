@@ -21,7 +21,7 @@
             
             for (int i = 0; i < rows; i++)
             {
-                Console.Write("Enter row {0}: ", i);
+                Console.Write("Enter startRowIndex {0}: ", i);
                 var row = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
                 
                 for (int j = 0; j < cols; j++)
@@ -33,11 +33,11 @@
             int maximalSum = int.MinValue;
             int[,] maximalSumMatrix = new int[3, 3];
                 
-            for (int i = 0; i < matrix.GetLength(0) - 2; i++)
+            for (int currentRow = 0; currentRow < matrix.GetLength(0) - 2; currentRow++)
             {
-                for (int j = 0; j < matrix.GetLength(1) - 2; j++)
+                for (int currentCol = 0; currentCol < matrix.GetLength(1) - 2; currentCol++)
                 {
-                    int[,] currentExtractedMatrix = ExtractMatrix(matrix, i, j);
+                    int[,] currentExtractedMatrix = ExtractMatrix(matrix, currentRow, currentCol);
                     int currentExtractedMatrixSum = CalculateMatrixSum(currentExtractedMatrix);
                         
                     if (currentExtractedMatrixSum > maximalSum)
@@ -56,11 +56,11 @@
         {
             Console.WriteLine();
 
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write("{0}", matrix[i, j].ToString().PadLeft(5));
+                    Console.Write("{0}", matrix[row, col].ToString().PadLeft(5));
                 }
 
                 Console.WriteLine("\n");
@@ -71,26 +71,27 @@
         {
             int sum = 0;
 
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    sum += matrix[i, j];
+                    sum += matrix[row, col];
                 }
             }
 
             return sum;
         }
 
-        private static int[,] ExtractMatrix(int[,] matrix, int row, int col)
+        private static int[,] ExtractMatrix(int[,] matrix, int startRowIndex, int startColIndex)
         {
             int[,] extractedMatrix = new int[3, 3];
 
-            for (int i = 0; i < 3; i++)
+            for (int nextRowCell = 0; nextRowCell < 3; nextRowCell++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int nextColCell = 0; nextColCell < 3; nextColCell++)
                 {
-                    extractedMatrix[i, j] = matrix[row + i, col + j];
+                    extractedMatrix[nextRowCell, nextColCell] = 
+                        matrix[startRowIndex + nextRowCell, startColIndex + nextColCell];
                 }
             }
             
