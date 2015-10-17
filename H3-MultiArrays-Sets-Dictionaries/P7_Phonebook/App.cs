@@ -29,6 +29,7 @@
                 currentLine = Console.ReadLine();
             }
 
+            Console.WriteLine("You are now in \"search\" mode. Type \"END\" to finish.");
             string searchedName = Console.ReadLine();
             
             while (!searchedName.Equals("END"))
