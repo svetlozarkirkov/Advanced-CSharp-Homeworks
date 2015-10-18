@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_StringLength", "P2_Strin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_CountSubstringOccurrences", "P3_CountSubstringOccurrences\P3_CountSubstringOccurrences.csproj", "{B18F1320-5CE5-4A18-9C63-AA152F28E2AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P4_TextFilter", "P4_TextFilter\P4_TextFilter.csproj", "{0B3537E7-4988-45FE-94E5-7128ED48AD86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B18F1320-5CE5-4A18-9C63-AA152F28E2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B18F1320-5CE5-4A18-9C63-AA152F28E2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B18F1320-5CE5-4A18-9C63-AA152F28E2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
