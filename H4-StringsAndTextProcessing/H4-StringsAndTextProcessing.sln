@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3_CountSubstringOccurrence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P4_TextFilter", "P4_TextFilter\P4_TextFilter.csproj", "{0B3537E7-4988-45FE-94E5-7128ED48AD86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5_UnicodeCharacters", "P5_UnicodeCharacters\P5_UnicodeCharacters.csproj", "{FB6FF704-871F-4848-B7DD-2B21CFD9DED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P6_Palindromes", "P6_Palindromes\P6_Palindromes.csproj", "{3495E499-3DF1-4722-B5C6-7DA11F46D24E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B3537E7-4988-45FE-94E5-7128ED48AD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6FF704-871F-4848-B7DD-2B21CFD9DED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6FF704-871F-4848-B7DD-2B21CFD9DED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6FF704-871F-4848-B7DD-2B21CFD9DED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6FF704-871F-4848-B7DD-2B21CFD9DED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3495E499-3DF1-4722-B5C6-7DA11F46D24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3495E499-3DF1-4722-B5C6-7DA11F46D24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3495E499-3DF1-4722-B5C6-7DA11F46D24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3495E499-3DF1-4722-B5C6-7DA11F46D24E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
