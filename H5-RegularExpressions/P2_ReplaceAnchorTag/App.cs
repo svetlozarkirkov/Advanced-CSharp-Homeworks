@@ -5,6 +5,9 @@
 
     internal sealed class App
     {
+        private const string AnchorTagPattern = 
+                @"(<a href=)([""|']{1})(?<url>[^>|^'|^""]+)(\2)[>]{1}(?<title>[^<|^>]+)(<\/a>)";
+
         internal static void Main()
         {
             string firstString = @"<ul><li><a href=""http://softuni.bg"">SoftUni</a></li></ul>";
@@ -13,19 +16,30 @@
             // The string below is not matched (different quotations)
             string wrongString = @"<ul><li><a href='http://softuni.bg"">SoftUni</a></li></ul>";
             
-            Console.WriteLine("First string: {0}", ReplaceAnchorTag(firstString));
-            Console.WriteLine("Second string: {0}", ReplaceAnchorTag(secondString));
-            Console.WriteLine("Wrong string: {0}", ReplaceAnchorTag(wrongString));
+            DisplayResult(firstString);
+            DisplayResult(secondString);
+            DisplayResult(wrongString);
         }
 
         private static string ReplaceAnchorTag(string input)
         {
-            string pattern = @"(<a href=)([""|']{1})(?<url>[^>|^'|^""]+)(\2)[>]{1}(?<title>[^<]+)(<\/a>)";
-
             return Regex.Replace(
                 input,
-                pattern,
+                AnchorTagPattern,
                 m => "[URL href=" + m.Groups["url"] + "]" + m.Groups["title"] + "[/URL]");
+        }
+
+        private static int TotalMatches(string input)
+        {
+            return Regex.Matches(input, AnchorTagPattern).Count;
+        }
+
+        private static void DisplayResult(string input)
+        {
+            Console.WriteLine(
+                "Replaced: {0}\nTotal matches: {1}\n",
+                ReplaceAnchorTag(input),
+                TotalMatches(input));
         }
     }
 }
