@@ -20,7 +20,7 @@
 
         private static string ReplaceAnchorTag(string input)
         {
-            string pattern = @"(<a href=)([""|']{1})(?<url>[^>|^'|^""]+)(\2)[>]{1}(?<title>\S+)(<\/a>)";
+            string pattern = @"(<a href=)([""|']{1})(?<url>[^>|^'|^""]+)(\2)[>]{1}(?<title>[^<]+)(<\/a>)";
 
             return Regex.Replace(
                 input,
