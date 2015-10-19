@@ -9,18 +9,23 @@
         {
             string firstString = @"<ul><li><a href=""http://softuni.bg"">SoftUni</a></li></ul>";
             string secondString = @"<ul><li><a href='http://softuni.bg'>SoftUni</a></li></ul>";
-            Console.WriteLine(ReplaceAnchorTag(firstString));
-            Console.WriteLine(ReplaceAnchorTag(secondString));
+            
+            // The string below is not matched (different quotations)
+            string wrongString = @"<ul><li><a href='http://softuni.bg"">SoftUni</a></li></ul>";
+            
+            Console.WriteLine("First string: {0}", ReplaceAnchorTag(firstString));
+            Console.WriteLine("Second string: {0}", ReplaceAnchorTag(secondString));
+            Console.WriteLine("Wrong string: {0}", ReplaceAnchorTag(wrongString));
         }
 
         private static string ReplaceAnchorTag(string input)
         {
-            string pattern = @"(<a href=[""|'])([^>]+)([""|']>)(\S+)(<\/a>)";
+            string pattern = @"(<a href=)([""|']{1})(?<url>[^>|^'|^""]+)(\2)[>]{1}(?<title>\S+)(<\/a>)";
 
             return Regex.Replace(
                 input,
                 pattern,
-                m => "[URL href=" + m.Groups[2].Value + "]" + m.Groups[4].Value + "[/URL]");
+                m => "[URL href=" + m.Groups["url"] + "]" + m.Groups["title"] + "[/URL]");
         }
     }
 }
