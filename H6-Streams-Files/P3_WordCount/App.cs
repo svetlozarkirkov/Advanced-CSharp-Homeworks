@@ -11,9 +11,9 @@
         {
             // The created file (result.txt) is in bin\Debug
             // The usings are chained for less nesting
-            using (StreamWriter resultWriter = new StreamWriter("result.txt"))
-            using (StreamReader wordsReader = new StreamReader("words.txt"))
-            using (StreamReader textReader = new StreamReader("text.txt"))
+            using (var resultWriter = new StreamWriter("result.txt"))
+            using (var wordsReader = new StreamReader("words.txt"))
+            using (var textReader = new StreamReader("text.txt"))
             {
                 var words = new Dictionary<string, int>();
                 string wordsTxtLine;
@@ -25,13 +25,13 @@
                 string textTxtLine;
                 while ((textTxtLine = textReader.ReadLine()) != null)
                 {
-                    MatchCollection matches = Regex.Matches(textTxtLine, @"\b[\w']*\b");
+                    var matches = Regex.Matches(textTxtLine, @"\b[\w']*\b");
                     foreach (Match match in matches)
                     {
-                        string word = match.Groups[0].Value;
-                        if (words.ContainsKey(word))
+                        string currentWord = match.Groups[0].Value;
+                        if (words.ContainsKey(currentWord))
                         {
-                            words[word] += 1;
+                            words[currentWord] += 1;
                         }
                     }
                 }

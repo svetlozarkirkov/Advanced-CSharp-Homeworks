@@ -8,14 +8,14 @@
         {
             // The created file (text_with_line_numbers.txt) is in bin\Debug
             // The usings are chained for less nesting
-            using (StreamWriter writer = new StreamWriter("text_with_line_numbers.txt"))
-            using (StreamReader reader = new StreamReader("text.txt"))
+            using (var writer = new StreamWriter("text_with_line_numbers.txt"))
+            using (var reader = new StreamReader("text.txt"))
             {
                 int count = 1;
 
                 while (!reader.EndOfStream)
                 {
-                    string currentLine = reader.ReadLine();
+                    var currentLine = reader.ReadLine();
                     writer.WriteLine("{0} -> {1}", count, currentLine);
                     count++;
                 }

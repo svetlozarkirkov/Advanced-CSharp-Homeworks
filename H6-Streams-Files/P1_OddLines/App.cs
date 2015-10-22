@@ -9,7 +9,7 @@
         {
             int count = 0;
             
-            using (StreamReader reader = new StreamReader("text.txt"))
+            using (var reader = new StreamReader("text.txt"))
             {
                 while (!reader.EndOfStream)
                 {
