@@ -37,7 +37,6 @@
                 }
 
                 var sortedWords = from entry in words orderby entry.Value descending select entry;
-                
                 foreach (KeyValuePair<string, int> entry in sortedWords)
                 {
                     resultWriter.WriteLine("{0} - {1}", entry.Key, entry.Value);

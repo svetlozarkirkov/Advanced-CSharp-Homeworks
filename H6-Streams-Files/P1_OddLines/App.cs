@@ -8,7 +8,6 @@
         internal static void Main()
         {
             int count = 0;
-            
             using (var reader = new StreamReader("text.txt"))
             {
                 while (!reader.EndOfStream)
