@@ -16,8 +16,7 @@
         private string email;
         private int groupNumber;
 
-        public Student(
-            string firstName, string lastName, int age, string phoneNumber, string email, int facultyNumber, int groupNumber, IList<int> marks)
+        public Student(string firstName, string lastName, int age, string phoneNumber, string email, int facultyNumber, int groupNumber, IList<int> marks)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -90,7 +89,7 @@
             }
         }
 
-        public int FacultyNumber { get; }
+        public int FacultyNumber { get; set; }
 
         public string Phone { get; set; }
 
@@ -135,6 +134,8 @@
                 }
             }
         }
+
+        public string GroupName { get; set; }
 
         public override string ToString()
         {
