@@ -151,6 +151,24 @@
                 new StudentSpecialty("Web Developer", 203314),
                 new StudentSpecialty("QA Engineer", 203914),
             };
+
+            // changing some students' faculty numbers to satisfy the conditions above
+            studentsList[2].FacultyNumber = 203314;
+            studentsList[12].FacultyNumber = 203114;
+            studentsList[22].FacultyNumber = 203814;
+            studentsList[32].FacultyNumber = 203914;
+            studentsList[42].FacultyNumber = 203314;
+
+            var query =
+                from st in studentsList
+                join sp in studentSpecialties
+                on st.FacultyNumber equals sp.FacultyNumber
+                select new { Name = st.FirstName + " " + st.LastName, st.FacultyNumber, Specialty = sp.SpecialtyName };
+
+            foreach (var item in query)
+            {
+                Console.WriteLine("\n" + item);
+            }
         }
     }
 }
