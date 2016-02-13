@@ -10,23 +10,24 @@
             @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
             @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
 
-        private static int studentsCount = 0;
         private string firstName;
         private string lastName;
         private int age;
         private string email;
         private int groupNumber;
 
-        public Student(string firstName, string lastName, int age, int groupNumber)
+        public Student(
+            string firstName, string lastName, int age, string phoneNumber, string email, int facultyNumber, int groupNumber, IList<int> marks)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Age = age;
-            this.Phone = "empty";
-            this.Email = "empty";
-            this.FacultyNumber = ++studentsCount;
+            this.Phone = phoneNumber;
+            this.Email = email;
+            this.FacultyNumber = facultyNumber;
             this.Marks = new List<int>();
             this.GroupNumber = groupNumber;
+            this.Marks = marks;
         }
 
         public string FirstName
@@ -102,7 +103,7 @@
 
             set
             {
-                if (Regex.IsMatch(value, EmailRegex, RegexOptions.IgnoreCase) || value.Equals("empty"))
+                if (Regex.IsMatch(value, EmailRegex, RegexOptions.IgnoreCase))
                 {
                     this.email = value;
                 }
@@ -138,14 +139,15 @@
         public override string ToString()
         {
             string output = string.Format(
-                "Full name: {0} {1}\nAge: {2}\nPhone: {3}\nE-mail: {4}\nFaculty number: {5}\nGroup number: {6}\n",
+                "\r\nFull name: {0} {1}\nAge: {2}\nPhone: {3}\nE-mail: {4}\nFaculty number: {5}\nGroup number: {6}\nMarks: [ {7} ]\r\n",
                 this.FirstName,
                 this.LastName,
                 this.Age,
                 this.Phone,
                 this.Email,
                 this.FacultyNumber,
-                this.GroupNumber);
+                this.GroupNumber,
+                string.Join(", ", this.Marks));
 
             return output;
         }

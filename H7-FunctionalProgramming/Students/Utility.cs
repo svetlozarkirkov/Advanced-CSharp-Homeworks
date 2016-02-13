@@ -101,5 +101,13 @@
 
             return result.ToString();
         }
+
+        public static void DrawSeparator()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(new string('=', 40));
+            }
+        }
     }
 }
