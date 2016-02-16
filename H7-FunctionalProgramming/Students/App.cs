@@ -14,21 +14,21 @@
             for (int i = 0; i < 50; i++)
             {
                 studentsList.Add(new Student(
-                    Faker.Name.First(),
-                    Faker.Name.Last(),
-                    Faker.RandomNumber.Next(15, 63),
-                    Faker.Phone.Number(),
-                    Faker.Internet.Email(),
-                    Faker.RandomNumber.Next(222222, 888888),
-                    Faker.RandomNumber.Next(1, 3),
+                    Faker.NameFaker.FirstName(),
+                    Faker.NameFaker.LastName(),
+                    Faker.NumberFaker.Number(15, 63),
+                    Faker.PhoneFaker.InternationalPhone(),
+                    Faker.InternetFaker.Email(),
+                    Faker.NumberFaker.Number(222222, 888888),
+                    Faker.NumberFaker.Number(1, 3),
                     new List<int>
                     {
-                        Faker.RandomNumber.Next(2,6),
-                        Faker.RandomNumber.Next(2,6),
-                        Faker.RandomNumber.Next(2,6),
-                        Faker.RandomNumber.Next(2,6),
-                        Faker.RandomNumber.Next(2,6),
-                        Faker.RandomNumber.Next(2,6)
+                        Faker.NumberFaker.Number(2, 6),
+                        Faker.NumberFaker.Number(2, 6),
+                        Faker.NumberFaker.Number(2, 6),
+                        Faker.NumberFaker.Number(2, 6),
+                        Faker.NumberFaker.Number(2, 6),
+                        Faker.NumberFaker.Number(2, 6)
                     }));
             }
 
@@ -55,7 +55,7 @@
             var studentsByAge =
                 from st in studentsList
                 where st.Age >= 18 && st.Age <= 24
-                select new {st.FirstName, st.LastName, st.Age};
+                select new { st.FirstName, st.LastName, st.Age };
 
             // P5 - Sort Students
             studentsList
@@ -95,11 +95,11 @@
                 .ForEach(Console.WriteLine);
 
             // P8 - Excellent students
-            //(Creates IEnumerable of an anonymous type taken from the students which have at least one 6 mark)
+            // (Creates IEnumerable of an anonymous type taken from the students which have at least one 6 mark)
             var excellentStudents =
                 from st in studentsList
                 where st.Marks.Contains(6)
-                select new {FullName = st.FirstName + " " + st.LastName, st.Marks};
+                select new { FullName = st.FirstName + " " + st.LastName, st.Marks };
 
             // P9 - Weak students
 
@@ -112,7 +112,7 @@
             // printing the marks of the students with faculty number ending with "14"
             studentsList
                 .Where(st => st.FacultyNumber.ToString().EndsWith("14"))
-                .Select(st => new {st.FirstName, st.LastName, st.FacultyNumber, st.Marks})
+                .Select(st => new { st.FirstName, st.LastName, st.FacultyNumber, st.Marks })
                 .ToList()
                 .ForEach(st => Console.WriteLine("[ " + string.Join(", ", st.Marks) + " ]"));
 
@@ -138,6 +138,7 @@
                 {
                     Console.Write("[ {0} {1} ] ", student.FirstName, student.LastName);
                 }
+
                 Console.WriteLine();
             }
 
